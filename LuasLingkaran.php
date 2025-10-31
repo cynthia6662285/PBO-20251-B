@@ -1,32 +1,31 @@
 <?php
 
-class LuasLingkaran {
+namespace App\Math;
 
+class LuasLingkaran{
     public const phi = 3.14;
-    public int $jari;
-    
+
+    private int $jari;
+
     public function __construct($isiJari = 1) {
         $this->jari = $isiJari;
     }
 
     public function tampil($nama = 'ban') {
         $rumus = LuasLingkaran::phi * ($this->jari * $this->jari);
-        echo "Lingkaran {$nama} hasilnya adalah: {$rumus}";
+        echo "Lingkaran {$nama} ini hasil nya adalah: {$rumus}";
     }
 
     public static function testing() {
         echo "<br/>";
-        echo "ini dari static 😁";
+        echo "Ini testing static 😁";
     }
 
     public function __destruct() {
-        echo "<br/>";
-        echo "udah ah cape malasssssss";
+        echo "<br> udah ah capee malasssssss";
     }
 }
 
-$lingkaran = new LuasLingkaran(12);
-// $lingkaran->jari = 12;
-$lingkaran->tampil('roda'); // method tampil
 
-LuasLingkaran::testing(); //static method
+
+// LuasLingkaran::testing(); //static method
