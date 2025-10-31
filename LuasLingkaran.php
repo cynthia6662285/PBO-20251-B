@@ -4,6 +4,10 @@ class LuasLingkaran {
 
     public const phi = 3.14;
     public int $jari;
+    
+    public function __construct($isiJari = 1) {
+        $this->jari = $isiJari;
+    }
 
     public function tampil($nama = 'ban') {
         $rumus = LuasLingkaran::phi * ($this->jari * $this->jari);
@@ -12,12 +16,17 @@ class LuasLingkaran {
 
     public static function testing() {
         echo "<br/>";
-        echo "ini dari static";
+        echo "ini dari static 😁";
+    }
+
+    public function __destruct() {
+        echo "<br/>";
+        echo "udah ah cape malasssssss";
     }
 }
 
-$lingkaran = new LuasLingkaran();
-$lingkaran->jari = 15;
-$lingkaran->tampil('roda'); //method tampil
+$lingkaran = new LuasLingkaran(12);
+// $lingkaran->jari = 12;
+$lingkaran->tampil('roda'); // method tampil
 
 LuasLingkaran::testing(); //static method
